@@ -3,6 +3,8 @@ const http = require('http')
 const pty = require('node-pty')
 const app = express();
 const {Server:socketServer} = require('socket.io');
+
+
 const server = http.createServer(app);
 var ptyProcess = pty.spawn('bash', [], {
     name: 'xterm-color',
